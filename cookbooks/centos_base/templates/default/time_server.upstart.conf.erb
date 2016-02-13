@@ -1,0 +1,13 @@
+#!upstart
+
+description "ntp"
+
+#env user=<%= node[:time][:user] %>
+
+startup
+
+exec /etc/init.d/ntpd start
+
+exec ntpupdate [:timeserver][:url]
+
+
