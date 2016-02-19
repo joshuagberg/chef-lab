@@ -15,7 +15,7 @@ package 'nginx' do
 end
 
 service 'nginx' do
-  action [:enable,:start]
+  action [:enable,:stop]
 end
 
 directory "/usr/share/nginx/www" do  
